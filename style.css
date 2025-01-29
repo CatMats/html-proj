@@ -1,23 +1,41 @@
 body{
-	background-image: linear-gradient(#a8cfff, #4766ad);
 	font-family: "Courier New";
-	animation: colorfading 5s infinite;
+	background-image: linear-gradient(#a8cfff, #4766ad);
+
+.scroll{
+	animation: bgscroll 5s linear infinite;
+}
+
+.fade{
+	animation: fade 2s linear;
 }
 
 h2{
 	background-color: #29C0D0;
 	animation: fade 4s linear;
+}
 
 .sad{
 	background-color: #12569B;
+	color: white;
 }
+
+.hope{
+	background-color: ##5876fc;
 }
 p{
 	font-family: "Courier New";
 	font-size: 20px;
+}
 
-
-
+@keyframes bgscroll{
+	0%{
+		background-position: 0px 0px;
+	}
+	100%{
+		background-position: 0px 300px;
+	}
+}
 
 @keyframes fade{
 	0%{opacity:0;}
@@ -29,3 +47,4 @@ p{
 	0%{background-color: #FFB7A7;}
 	100%{background-color: #FCC437;}
 }
+

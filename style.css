@@ -1,7 +1,31 @@
 body{
-	background-image: linear-gradient(red, yellow);
+	background-color: #CD95FF;
+	font-family: "Courier New";
+	animation: colorfading 5s infinite;
+}
+
+h2{
+	background-color: #29C0D0;
+	animation: fade 4s linear;
+
+.sad{
+	background-color: #12569B;
+}
 }
 p{
 	font-family: "Courier New";
 	font-size: 20px;
+
+
+
+
+@keyframes fade{
+	0%{opacity:0;}
+	15%{opacity:1;}
+	100%{opacity:0;}
+}
+
+@keyframes colorfading{
+	0%{background-color: #FFB7A7;}
+	100%{background-color: #FCC437;}
 }

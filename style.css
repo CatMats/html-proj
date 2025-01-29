@@ -1,0 +1,7 @@
+body{
+	background-image: linear-gradient(red, yellow);
+}
+p{
+	font-family: "Courier New";
+	font-size: 20px;
+}

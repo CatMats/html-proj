@@ -1,13 +1,6 @@
 body{
 	font-family: "Courier New";
 	background-image: linear-gradient(#a8cfff, #4766ad);
-
-.scroll{
-	animation: bgscroll 5s linear infinite;
-}
-
-.fade{
-	animation: fade 2s linear;
 }
 
 h2{
@@ -15,36 +8,73 @@ h2{
 	animation: fade 4s linear;
 }
 
-.sad{
-	background-color: #12569B;
-	color: white;
-}
-
-.hope{
-	background-color: ##5876fc;
-}
 p{
 	font-family: "Courier New";
 	font-size: 20px;
 }
 
-@keyframes bgscroll{
-	0%{
-		background-position: 0px 0px;
-	}
-	100%{
-		background-position: 0px 300px;
-	}
+
+.sad{
+	background-color: #12569B;
+	color: white;
 }
 
-@keyframes fade{
+.fade{
+	animation: toFade 2s ease-in;
+}
+
+.moveInRight{
+	animation: goRight 3s ease-out;
+}
+
+.moveInLeft{
+	animation: goLeft 3s ease-out;
+}
+
+.squishy{
+	animation: squish 5s ease-out infinite;
+}
+
+.grayscale{
+	animation: toGrayscale 6s ease-in forwards;
+}
+
+.tilt{
+	animation: tilting 5s ease-out infinite;
+
+}
+
+
+@keyframes toFade{
 	0%{opacity:0;}
-	15%{opacity:1;}
-	100%{opacity:0;}
+	100%{opacity:1;}
 }
 
-@keyframes colorfading{
-	0%{background-color: #FFB7A7;}
-	100%{background-color: #FCC437;}
+@keyframes goRight{
+	0%{transform: translateX(-1500px);}
+	100%{transform: translateX(0);}
 }
 
+@keyframes goLeft{
+	0%{transform: translateX(1500px);}
+	100%{transform: translateX(0);}
+}
+
+@keyframes squish{
+	0%{transform: scaleX(1);}
+	50%{transform: scaleX(0.25);
+		transform: scaleY(1.25);}
+	100%{transform: scaleX(1);
+	   transform: scaleY(1);}
+}
+
+@keyframes toGrayscale{
+	0%{filter: grayscale(0);}
+	100%{filter: grayscale(1);}
+}
+
+@keyframes tilting{
+	0%{transform: rotate(-20deg);}
+	50%{transform: rotate(20deg);}
+    100%{transform: rotate(-20deg);}
+}
